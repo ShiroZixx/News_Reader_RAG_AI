@@ -1,0 +1,15 @@
+name: New MCP server
+version: 0.0.1
+schema: v1
+
+mcpServers:
+  - name: github-mcp
+    command: C:\PROGRA~1\nodejs\npx.cmd
+    args:
+      - -y
+      - mcp-remote
+      - https://stormmcp.ai/gateway/f2e773c9-73c1-455c-b1fe-6f01f1e9c3f6/radar
+      - --header
+      - "X-API-Key: ag_TL7ZBPcZJUCAK4Lp2yQnnlb0fTM/6W4zLg9pz1WCgW0="
+    env: {}
+
