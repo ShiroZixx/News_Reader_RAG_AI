@@ -1,14 +1,14 @@
-import requests
-from bs4 import BeautifulSoup
 
-headers = {
-    "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36"
-}
 
-url = "https://vnexpress.net/cong-bo-duong-day-nong-ho-tro-160-thuyen-vien-viet-nam-o-trung-dong-5046145.html"
+import tiktoken
 
-dict = {"a": "b"}
+encoding = tiktoken.get_encoding("cl100k_base")
 
-url_link = next(iter(dict.keys()))
+text = """
+đào thải ra ngoài qua đường bài tiết.Khi dịch mật bị đào thải, gan buộc phải sản xuất lượng mật mới để bù đắp. Để có nguyên liệu sản xuất, gan sẽ tăng cường tìm kiếm cholesterol dư thừa trong máu bằng cách tăng các thụ thể LDL. Kết quả là nồng độ LDL trong máu sẽ giảm xuống đáng kể.
+"""
+tokens = encoding.encode(text)
 
-response  = requests.get(url_link, headers = headers)
+print(len(tokens))
+
+

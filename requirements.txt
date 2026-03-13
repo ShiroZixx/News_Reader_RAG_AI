@@ -1,0 +1,39 @@
+# Langchain framework
+langchain
+langchain-core
+langchain-community
+langchain_huggingface
+langchain_experimental
+langchain-openai
+langchain-classic
+langgraph
+
+# Vector DB
+qdrant-client
+langchain-qdrant
+
+# Embedding
+sentence-transformers
+transformers
+torch
+
+# Hybrid search
+rank-bm25
+
+# Google Gemini
+langchain_google_genai
+
+# Data processing
+pydantic
+
+# Web crawling
+requests
+beautifulsoup4
+lxml
+
+# Web UI
+streamlit
+
+# Utilities
+python-dotenv
+discord.py
