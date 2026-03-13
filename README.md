@@ -55,5 +55,5 @@ Tạo file `.env` và thêm các khóa API cần thiết (OpenAI/Google API Key,
 Chương trình chạy mặc định mô hình local llm: qwen3-4b-2507 và embeddings: halong_embedding thông qua chương trình LM-Studio. Chạy ổn định với RTX 3060 12GB. Có thể sử dụng các API OpenAI hoặc Gemini nếu không muốn chạy local.
 
 
-###Demo on Discord
+### Demo on Discord
   https://drive.google.com/file/d/1hgUvuMGQ2uBhgNR9WeJuIlToQ73S8NcO/view?usp=sharing
