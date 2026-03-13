@@ -31,13 +31,15 @@ Tạo file `.env` và thêm các khóa API cần thiết (OpenAI/Google API Key,
 ### 3. Chạy ứng dụng
 - **Chạy Discord Bot**:
   ```bash
-  python discord_bot.py
+  $env:PYTHONPATH="src"
+  python src/bot/discord_bot.py
   ```
 - **Chạy Web App**:
   ```bash
-  streamlit run app.py
+  $env:PYTHONPATH="src"
+  streamlit run src/bot/app.py
   ```
-  
+
 Để chạy được Discord Bot, bạn cần thực hiện các bước sau:
 1. Truy cập [Discord Developer Portal](https://discord.com/developers/applications).
 2. Nhấn **New Application** và đặt tên cho Bot của bạn.
