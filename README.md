@@ -6,7 +6,7 @@ Hệ thống AI Agent dựa trên cấu trúc Agentic RAG để thu thập dữ 
 - **AI Agent**: Quy trình xử lý tin tức: lọc nội dung, tóm tắt và trả lời câu hỏi dựa trên ngữ cảnh.
 - **Vector Database**: Sử dụng Vector Database để truy xuất thông tin từ kho dữ liệu tin tức đã lưu trữ.
 - **Triển khai**: 
-    - **Discord Bot**: Tương tác trực tiếp qua lệnh `/`.
+    - **Discord Bot**: Tương tác trực tiếp qua lệnh `!`.
     - **Streamlit Web App**: Giao diện trực quan để chọn chuyên mục và đọc tin.
 
 ## Công nghệ sử dụng
