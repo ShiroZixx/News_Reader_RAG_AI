@@ -1,13 +1,6 @@
-from langchain_text_splitters import RecursiveCharacterTextSplitter
 from langchain_experimental.text_splitter import SemanticChunker
 import json
 from langchain_core.documents import Document
-#from models import local_embeddings
-
-from retrievers import create_retriever, create_bm25_retriever, create_ensemble_retriever
-
-from vectoDB import qdrant_vectodb_setup,qdrant_collection_exists
-
 
 def create_documents(json_path: str):
 
@@ -84,30 +77,3 @@ def paragraphs_chunking(documents):
    
    return chunks
 
-
-if __name__ == "__main__":
-   data_json = "data\\articles.json"
-
-   docs = create_documents(data_json)
-   #chunks = semantic_chunking(docs, embeddings)
-   chunks = paragraphs_chunking(docs)
-
-   qdrant_vectodb = qdrant_vectodb_setup(embeddings=local_embeddings)
-   parent_retriever = create_retriever(vectorstore=qdrant_vectodb,
-                                       chunked_documents=chunks)
-   bm25_retriever = create_bm25_retriever(chunked_documents=chunks)
-
-   already_exists = qdrant_collection_exists()
-
-   if already_exists:
-      parent_retriever = create_retriever(
-            chunked_documents=chunks,
-            vectorstore=qdrant_vectodb,
-        )
-
-   list_retrievers = [parent_retriever,bm25_retriever]
-
-   ensemble_retriever = create_ensemble_retriever(list_retrievers)
-
-   result = ensemble_retriever.invoke("điện thoại")
-   print(result)

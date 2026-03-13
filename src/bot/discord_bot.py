@@ -156,7 +156,7 @@ async def on_message(message):
             await status_msg.edit(content=(
                 f"✅ Đã lấy dữ liệu thành công chuyên mục **{cat_display}**!\n\n"
                 f" **{len(articles)} bài viết** từ `vnexpress.net/{selected_category}`\n\n"
-                f"**Top bài viết:**\n"
+                f"*Bài viết mới nháta:**\n"
                 + "\n".join(preview_lines)
                 + more_text
                 + "\n\nBây giờ bạn có thể hỏi về tin tức!"
