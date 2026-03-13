@@ -2,7 +2,7 @@ import discord
 import asyncio
 import os
 from langchain_core.messages import HumanMessage
-from agent_graph import build_pipeline, CATEGORIES
+from agents.agent_graph import build_pipeline, CATEGORIES
 
 TOKEN = os.getenv("DISCORD_TOKEN")
 

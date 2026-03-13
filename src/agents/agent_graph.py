@@ -10,12 +10,12 @@ import torch
 import gc
 import re
 
-from scraper import save_articles_json
-from models import local_qwen_4b, local_embeddings
-from documents_chunking import create_documents, paragraphs_chunking
-from vectoDB import qdrant_vectodb_setup
-from retrievers import create_retriever, create_bm25_retriever, create_ensemble_retriever
-from promt import GRADE_PROMPT, REWRITE_PROMPT, GENERATE_PROMPT
+from scraper.scraper import save_articles_json
+from models.models import local_qwen_4b, local_embeddings
+from rag.documents_chunking import create_documents, paragraphs_chunking
+from rag.vectoDB import qdrant_vectodb_setup
+from rag.retrievers import create_retriever, create_bm25_retriever, create_ensemble_retriever
+from prompts.promt import GRADE_PROMPT, REWRITE_PROMPT, GENERATE_PROMPT
 
 
 # Category mapping
