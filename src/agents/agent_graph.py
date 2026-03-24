@@ -123,7 +123,7 @@ def build_pipeline(category: str):
     try:
         vectorstore = qdrant_vectodb_setup(embeddings=embeddings, category=cat_name)
         parent_retriever = create_retriever(vectorstore=vectorstore)
-        parent_retriever.add_documents(chunked_documents, ids=None)  # <-- embedding xảy ra ở đây
+        parent_retriever.add_documents(chunked_documents, ids=None)  
     finally:
         del embeddings
         torch.cuda.empty_cache()
